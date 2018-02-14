@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~typeface-quicksand/index.css";
+
+html {
+    /*background: linear-gradient(#E6F3EA, #FFFFFF);*/
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Quicksand";
+    line-height: 1.2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E6F3EA), to(#FFFFFF)) fixed;
+}
