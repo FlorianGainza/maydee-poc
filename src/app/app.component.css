@@ -1,0 +1,29 @@
+.login-line {
+    width: 100%;
+}
+
+.login-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-sn {
+    padding: 30px;
+}
+
+.login-logo {
+    padding: 40px 0px 40px 0px;
+}
+
+.login-field {
+    width: 100%;
+}
+
+.connexion-btn {
+    background-color:  #42D29F;
+    color: #FAF7F7;
+    margin: 50px 0px 50px 0px;
+    font-size: 20px;
+}
