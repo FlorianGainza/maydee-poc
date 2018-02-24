@@ -1,29 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <img class="login-logo" [src]="maydeeImagePath">
-  <p class="login-line">
-    SE CONNECTER AVEC
-  </p>
-  <img class="login-sn" height="80" width="80" [src]="twitterImagePath">
-  <img class="login-sn" height="80" width="80" [src]="facebookImagePath">
-  <img class="login-sn" height="80" width="80" [src]="googleImagePath">
-  <img class="login-sn" height="80" width="80" [src]="linkedinImagePath">
-  <p class="login-line">
-      OU
-  </p>
-  <form class="login-form">
-    <mat-form-field class="login-field">
-      <input matInput placeholder="E-MAIL">
-    </mat-form-field>
-    <mat-form-field class="login-field" >
-      <input matInput placeholder="MOT DE PASSE">
-    </mat-form-field>
-    <p class="login-line">
-        Mot de passe oublié ?
-    </p>
-  </form>
-  <mat-button-toggle class="connexion-btn">Connexion</mat-button-toggle>
-  <p class="login-line">
-    Besoin d'aide ? S'inscire
-  </p>
+<div *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
 </div>

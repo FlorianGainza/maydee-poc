@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +7,45 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  maydeeImagePath:   string;
-  twitterImagePath:  string;
-  facebookImagePath: string;
-  googleImagePath:   string;
-  linkedinImagePath: string
+
+  chart = [];
+  ctx   = null;
 
   constructor() {
-    this.maydeeImagePath   = 'assets/img/Maydée-logo-entier-e1511168387551.png';
-    this.twitterImagePath  = 'assets/img/if_twitter_1279054.png';
-    this.facebookImagePath = 'assets/img/if_facebook_1279052.png';
-    this.googleImagePath   = 'assets/img/if_google-plus_1279046.png';
-    this.linkedinImagePath = 'assets/img/if_linkedin_1279057.png';
+  }
+
+  ngAfterViewInit() {
+    this.ctx = document.getElementById("canvas");
+    this.chart = new Chart(this.ctx , {
+      type: 'line',
+      data: {
+        labels: ['a', 'b'],
+        datasets: [
+          {
+            data: [12, 15],
+            borderColor: '#3cba9f',
+            fill: false
+          },
+          {
+            data: [0, 3],
+            borderColor: '#ffcc00',
+            fill: false
+          },
+        ]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            display: true
+          }],
+          yAxes: [{
+            display: true
+          }]
+        }
+      }
+   })
   }
 }
